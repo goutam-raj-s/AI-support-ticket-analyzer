@@ -20,3 +20,5 @@ yarn-error.log*
 # Testing and coverage
 coverage/
 .nyc_output/
+
+temp.js
