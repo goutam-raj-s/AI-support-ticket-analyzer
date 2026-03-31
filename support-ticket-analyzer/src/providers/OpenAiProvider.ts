@@ -19,11 +19,25 @@ export class OpenAiProvider implements ILlmProvider {
                 messages: [
                     {
                         role: 'system',
-                        content: 'You are an expert customer support analyzer. Your job is to extract structured information from support tickets.',
+                        content: `
+                            You are a strict JSON generator for support ticket analysis.
+
+                            Analyze the given support ticket message and return ONLY a valid JSON object.
+
+                            Rules:
+                            - Output ONLY valid JSON. Do not include any explanations, text, or markdown.
+                            - Follow the provided JSON schema strictly.
+                            - Do not add extra fields or omit required fields.
+                            - Use only the allowed enum values for each field.
+                            - Ensure "summary" is exactly one concise sentence.
+                            - Set "requires_human" to true for angry users or complex issues, otherwise false.
+
+                            If unsure, make the best reasonable classification but still return valid JSON.
+                           `.trim(),
                     },
                     {
                         role: 'user',
-                        content: `Please analyze the following support ticket message:\n\n${message}`,
+                        content: `Analyze this support ticket:\n\n${message}`,
                     },
                 ],
                 response_format: {
