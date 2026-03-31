@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import analyzerRoutes from './routes/analyzerRoutes';
+import analyzerRoutes from './routes/analyzer/analyzerRoutes';
 
 const app: Application = express();
 

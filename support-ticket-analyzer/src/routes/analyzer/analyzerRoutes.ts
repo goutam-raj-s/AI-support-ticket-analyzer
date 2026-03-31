@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { AnalyzerController } from '../controllers/analyzerController';
-import { AnalyzerService } from '../services/analyzerService';
-import { openaiClient } from '../config/openai';
-import { OpenAiProvider } from '../providers/OpenAiProvider';
+import { AnalyzerController } from './analyzerController';
+import { AnalyzerService } from './analyzerService';
+import { openaiClient } from '../../config/openai';
+import { OpenAiProvider } from '../../providers/OpenAiProvider';
 
 const router = Router();
 

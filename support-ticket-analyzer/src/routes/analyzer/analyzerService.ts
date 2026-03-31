@@ -1,5 +1,5 @@
-import { TicketAnalysis } from '../types/ticketAnalysis';
-import { ILlmProvider } from '../utils/interfaces/ILlmProvider';
+import { TicketAnalysis } from '../../types/ticketAnalysis';
+import { ILlmProvider } from '../../utils/interfaces/ILlmProvider';
 
 export class AnalyzerService {
     private llmProvider: ILlmProvider;

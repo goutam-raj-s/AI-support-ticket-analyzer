@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { AnalyzerService } from '../services/analyzerService';
-import { SuccessResponse, ErrorResponse } from '../utils/apiResponse';
+import { AnalyzerService } from './analyzerService';
+import { SuccessResponse, ErrorResponse } from '../../utils/apiResponse';
 
 export class AnalyzerController {
     private analyzerService: AnalyzerService;
